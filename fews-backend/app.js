@@ -1,9 +1,13 @@
 import * as cheerio from "cheerio";
 import fetch from "node-fetch";
 import express from "express";
+import * as dotenv from "dotenv";
+import cors from "cors";
 
+dotenv.config();
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.get("/articles", async (req, res) => {
   const response = await fetch("https://www.motorsport.com/f1/");
@@ -26,6 +30,6 @@ app.get("/articles", async (req, res) => {
   res.send(arr);
 });
 
-app.listen(3000, () => {
-  console.log("localhost:3000");
+app.listen(process.env.PORT, () => {
+  console.log(`localhost:${process.env.PORT}`);
 });
