@@ -28,6 +28,12 @@ code {
 .articlecard h2 {
   color: white;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.articlecard a {
+  text-decoration: none;
 }
 
 .articlegrid {
@@ -38,6 +44,7 @@ code {
 }
 
 .container {
-  width: 50%;
-  height: 50%;
+  height: 900px;
+  width: 950px;
+  margin: 0 auto;
 }

@@ -15,7 +15,15 @@ function App() {
     <div className="container">
       <div className="articlegrid">
         {articles.map((art, i) => {
-          return <ArticleCard title={art.t} pic={art.i} />;
+          return (
+            <ArticleCard
+              title={art.t}
+              pic={art.i}
+              link={art.u}
+              width={art.w}
+              height={art.h}
+            />
+          );
         })}
       </div>
     </div>

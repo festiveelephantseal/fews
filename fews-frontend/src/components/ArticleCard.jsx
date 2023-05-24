@@ -1,8 +1,10 @@
-const ArticleCard = ({ title, link, pic }) => {
+const ArticleCard = ({ title, link, pic, width, height }) => {
   return (
     <div className="articlecard">
       <img src={pic} alt="cover" />
-      <h2>{title}</h2>
+      <a href={link}>
+        <h2>{title}</h2>{" "}
+      </a>
     </div>
   );
 };
