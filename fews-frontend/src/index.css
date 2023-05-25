@@ -17,8 +17,11 @@ code {
   width: 350px;
   height: 350px;
   background-color: rgba(42, 42, 42, 0.667);
-  border-radius: 5%;
+  border-radius: 10px;
   transition: box-shadow 0.3s;
+  overflow: scroll;
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
 }
 
 .articlecard:hover {
@@ -28,14 +31,12 @@ code {
 .articlecard img {
   width: 350px;
   height: 200px;
-  border-radius: 5% 5% 0% 0%;
+  border-radius: 10px 10px 0% 0%;
 }
 
 .articlecard h2 {
   color: white;
   text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .articlecard a {

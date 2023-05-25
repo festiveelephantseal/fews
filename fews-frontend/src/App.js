@@ -8,9 +8,15 @@ const api = "http://localhost:5000/articles";
 function App() {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
-    axios.get(api).then((res) => {
-      setArticles(res.data);
-    });
+    axios
+      .get(api)
+      .then((res) => {
+        if (res.status === 429) {
+          console.log("Too many requests");
+        }
+        setArticles(res.data);
+      })
+      .catch((err) => console.log(err));
   }, []);
   return (
     <>
