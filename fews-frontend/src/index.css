@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #353839;
+  background-color: #1f1f1f;
 }
 
 code {
@@ -16,13 +16,19 @@ code {
 .articlecard {
   width: 350px;
   height: 350px;
-  background-color: #36454f;
+  background-color: rgba(42, 42, 42, 0.667);
   border-radius: 5%;
+  transition: box-shadow 0.3s;
+}
+
+.articlecard:hover {
+  box-shadow: 0 0 11px #fff;
 }
 
 .articlecard img {
   width: 350px;
   height: 200px;
+  border-radius: 5% 5% 0% 0%;
 }
 
 .articlecard h2 {
@@ -47,4 +53,14 @@ code {
   height: 900px;
   width: 950px;
   margin: 0 auto;
+}
+
+.navbar li {
+  color: white;
+  list-style-type: none;
+  font-size: large;
+}
+
+.navbar {
+  padding: 20px;
 }
